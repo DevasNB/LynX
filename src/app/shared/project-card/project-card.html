@@ -1,0 +1,15 @@
+<div class="card h-100 shadow-sm">
+    <img [src]="image" class="card-img-top" alt="{{ title }}" />
+    <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ title }}</h5>
+        <p class="card-text">{{ description }}</p>
+        <div class="mt-auto d-flex align-items-center justify-content-between">
+            <div class="dots">
+                <span class="dot" *ngFor="let i of [1,2,3]"></span>
+            </div>
+            <div *ngIf="participants > 1" class="participants">
+                {{ participants }} participants
+            </div>
+        </div>
+    </div>
+</div>

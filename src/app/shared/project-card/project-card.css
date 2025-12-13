@@ -1,0 +1,26 @@
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+  gap: 4px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #6a11cb; /* cor do gradiente LynX */
+  border-radius: 50%;
+}
+
+.participants {
+  font-size: 0.9rem;
+  color: #555;
+}

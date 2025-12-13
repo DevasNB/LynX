@@ -10,3 +10,13 @@
         <h2 class="profile-name">John Doe</h2>
     </div>
 </section>
+
+<section class="projects mt-5 px-3">
+    <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let project of projects">
+            <app-project-card [image]="project.image" [title]="project.title" [description]="project.description"
+                [participants]="project.participants">
+            </app-project-card>
+        </div>
+    </div>
+</section>
