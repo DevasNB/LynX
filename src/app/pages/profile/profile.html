@@ -1,22 +1,31 @@
 <section class="profile-page">
-    <!-- Banner -->
     <div class="banner">
-        <h1 class="banner-title">Welcome to LynX Profile</h1>
+        <img src="assets/profile-banner.jpg" alt="Profile Banner" class="banner-image" />
     </div>
 
-    <!-- Perfil -->
-    <div class="profile">
-        <img src="assets/avatar.jpg" alt="Profile Photo" class="profile-photo" />
-        <h2 class="profile-name">John Doe</h2>
+    <div class="container">
+        <div class="profile d-flex flex-column flex-md-row align-items-center align-items-md-end gap-3">
+            <img src="assets/avatar.jpg" alt="Profile Avatar" class="profile-photo" />
+
+            <h2 class="profile-name text-center text-md-start">
+                John Doe
+            </h2>
+        </div>
     </div>
 </section>
 
 <section class="projects mt-5 px-3">
-    <div class="row">
-        <div class="col-md-4 mb-4" *ngFor="let project of projects">
-            <app-project-card [image]="project.image" [title]="project.title" [description]="project.description"
-                [participants]="project.participants">
-            </app-project-card>
+    <div class="container">
+        <div class="row">
+
+            @for (project of projects; track project) {
+            <div class="col-md-4 mb-4">
+                <app-project-card [image]="project.image" [title]="project.title" [description]="project.description"
+                    [participants]="project.participants">
+                </app-project-card>
+            </div>
+            }
+
         </div>
     </div>
 </section>
